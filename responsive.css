@@ -64,23 +64,21 @@
     justify-content: space-between;
   }
 
+  .nav-bar .nav-bar__menu {
+    display: none;
+  }
+
   .nav-bar .nav-bar__link {
-    display: block;
+    position: static;
+    width: 30%;
+    background-image: none;
+    background-color: transparent;
   }
 
   .nav-bar .nav-bar__link ul {
     display: flex;
-    gap: 32px;
+    justify-content: right;
     list-style-type: none;
-  }
-
-  .nav-bar .nav-bar__link ul li a {
-    text-decoration: none;
-    color: white;
-  }
-
-  .nav-bar .nav-bar__menu {
-    display: none;
   }
 
   .jumbotron {

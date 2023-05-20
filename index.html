@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style2.css">
   <link rel="stylesheet" href="./responsive.css">
+  <link rel="stylesheet" href="./lightbox.css">
   <title>Digitala Landing Page</title>
 </head>
 
@@ -33,9 +34,11 @@
       </div>
     </div>
   </header>
+
   <main id="">
     <div class="content">
-      <article class="article">
+
+      <article class="article" id="about">
         <h3 class="article__article-title">Tentang Kami</h3>
         <hr class="hr-line">
         <div class="article__text-wrapper">
@@ -50,16 +53,17 @@
         </div>
         <div class="box-wrapper">
           <div class="article__article-image-box">
-            <img src="./img/office1.jpg" alt="">
+            <img src="./img/office1.jpg" alt="" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
           </div>
           <div class="article__article-image-box">
-            <img src="./img/office2.jpg" alt="">
+            <img src="./img/office2.jpg" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
           </div>
           <div class="article__article-image-box">
-            <img src="./img/office3.jpg" alt="">
+            <img src="./img/office3.jpg" alt="" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
           </div>
         </div>
       </article>
+
       <article class="article article-2">
         <div class="left-side">
           <h3 class="article__article-title">Mengapa Pilih Kami</h3>
@@ -102,6 +106,7 @@
             </div>
           </div>
         </div>
+
         <aside class="aside">
           <h3 class="article__article-title">Tentang Penulis</h3>
           <hr class="hr-line">
@@ -123,6 +128,7 @@
           </div>
         </aside>
       </article>
+
     </div>
     <div id="contact" class="article article-contact">
       <h3 class="article__article-title">Contact Us</h3>
@@ -140,11 +146,55 @@
       </form>
     </div>
   </main>
+
   <footer class="footer">
     <p>Copyright 2023 - Alfito Dimas Prasetyo</p>
   </footer>
 
+  <!-- LIGHTBOX -->
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="./img/office1.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="./img/office2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="./img/office3.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+
+      <div class="column">
+        <img class="demo cursor" src="./img/office1.jpg" style="width:100%" onclick="currentSlide(1)">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./img/office2.jpg" style="width:100%" onclick="currentSlide(2)">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./img/office3.jpg" style="width:100%" onclick="currentSlide(3)">
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+
   <script src="./script.js"></script>
+  <script src="./lightbox.js"></script>
 </body>
 
 </html>

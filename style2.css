@@ -18,6 +18,10 @@
   color: var(--text);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   background-image: var(--gradient);
   margin-bottom: 8px;
@@ -43,16 +47,38 @@ header {
   color: var(--white);
 }
 
-.nav-bar .nav-bar__link {
-  display: none;
-}
-
 .nav-bar .nav-bar__menu {
   background-color: transparent;
   border: none;
   font-size: 24px;
   cursor: pointer;
   color: var(--white);
+}
+
+.nav-bar .nav-bar__link {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-image: var(--gradient-versa);
+  overflow: hidden;
+}
+
+.nav-bar .nav-bar__link.open {
+  left: 0;
+}
+
+.nav-bar .nav-bar__link ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-family: var(--font-header);
+  padding: 12px;
 }
 
 .jumbotron {
